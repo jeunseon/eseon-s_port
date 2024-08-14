@@ -220,6 +220,7 @@ header .gnb .menuBox.on li:nth-child(4) a {
 .con1 .textAni {
     position: relative;
     margin-top: 14px;
+
 }
 .con1 .textAni::before {
     content: '';
@@ -243,7 +244,7 @@ header .gnb .menuBox.on li:nth-child(4) a {
     grid-row-start: 1;
 }
 
-/* con2 */
+/* con2 design */
 .con2 .inner {
     display: flex;
     justify-content: space-between;
@@ -327,4 +328,55 @@ header .gnb .menuBox.on li:nth-child(4) a {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+}
+
+/* con3 project */
+.con3 {
+    background-color: #fff;
+    color: #141212;
+}
+.con3 .inner {
+    padding: 50px;
+}
+.con3 .mainTextBox h2 {
+    font-size: 100px;
+    text-transform: uppercase;
+}
+.con3 .listBox {
+    margin-top: 150px;
+    border-top: 1px solid #141212;
+}
+.con3 .listBox >li {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0;
+    border-bottom: 1px solid #141212;
+}
+.con3 .listBox >li .subText {
+    flex-grow: 1;
+    display: grid;
+    grid-template-rows: 2fr auto;
+    row-gap: 30px;
+}
+.con3 .listBox >li .subText h3 {
+    font-size: 60px;
+    letter-spacing: -3px;
+}
+.con3 .listBox >li .subText .hashBox {
+    display: flex;
+    justify-content: start;
+}
+.con3 .listBox >li .subText .hashBox >li {
+    margin-right: 10px;
+    opacity: .5;
+}
+.con3 .listBox >li .link-review {
+    font-size: 20px;
+    align-self: center;
+}
+.con3 .listBox >li .link-review::after {
+    content:'\21C0';
+    display: inline-block;
+    font-size: 20px;
+    padding-left: 10px;
 }
