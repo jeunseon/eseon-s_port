@@ -293,31 +293,31 @@ header .gnb .menuBox.on li:nth-child(4) a {
     background-position: center;
 }
 .con2 .listBox li a[data-img="4"] {
-    background-image: url();
+    background-image: url(/images/wemake.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
 .con2 .listBox li a[data-img="5"] {
-    background-image: url();
+    background-image: url(/images/black.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
 .con2 .listBox li a[data-img="6"] {
-    background-image: url();
+    background-image: url(/images/wemake2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
 .con2 .listBox li a[data-img="7"] {
-    background-image: url();
+    background-image: url(/images/lotte.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
 .con2 .listBox li a[data-img="8"] {
-    background-image: url();
+    background-image: url(/images/kakao.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
