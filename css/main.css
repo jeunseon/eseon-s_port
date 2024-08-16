@@ -273,12 +273,14 @@ header .gnb .menuBox.on li:nth-child(4) a {
 .con2 .listBox li a {
     display: block;
     padding: 45% 0;
+    box-sizing: border-box;
     border-radius: 10px;
     filter: brightness(50%);
     transition: .5s;
 }
 .con2 .listBox li a:hover {
     filter: brightness(100%);
+    box-shadow: 0 0 10px rgba(255, 255, 255, .3);
 }
 .con2 .listBox li a[data-img="1"] {
     background-image: url(https://eunseon-portfolio.netlify.app/img/event.jpg);
@@ -387,7 +389,7 @@ header .gnb .menuBox.on li:nth-child(4) a {
 }
 .con3 .listBox >li .link-review::before {
     content: '';
-    background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/900px-Octicons-mark-github.svg.png?20180806170715);
+    background-image: url(https://blog.kakaocdn.net/dn/Z9cFp/btsI6e8HZ5v/gA8ENKZDRw8KKrIPSvI4KK/img.png);
     border-radius: 10px;
     display: inline-block;
     width: 30px;
