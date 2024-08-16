@@ -412,16 +412,15 @@ header .gnb .menuBox.on li:nth-child(4) a {
 }
 .footer .box .mainTextBox {
     align-self: center;
+    text-transform: uppercase;
+    letter-spacing: -1px;
 }
 .footer .box .mainTextBox h2 {
     font-size: 110px;
-    text-transform: uppercase;
-    letter-spacing: -1px;
     font-style: italic;
 }
-.footer .box .mainTextBox h2 span {
+.footer .box .mainTextBox p {
     font-size: 50px;
-    display: block;
     font-style: normal;
 }
 .footer .box .talkBtn {
@@ -456,11 +455,14 @@ header .gnb .menuBox.on li:nth-child(4) a {
     flex-direction: row;
     justify-content: center;
 }
-.footer .box .btnBox a {
+.footer .box .btnBox .btn {
     display: inline-block;
     text-transform: uppercase;
-    padding: 20px;
-    font-size: 12px;
+    background: none;
+    color: #fff;
+    opacity: .5;
+    margin: 20px;
+    padding: 10px;
 }
 .footer .copy {
     padding-top: 25px;
