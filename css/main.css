@@ -12,11 +12,15 @@ button {background: none; border: none;}
 img {vertical-align: middle;}
 
 /* 공통요소 */
+body, html {
+    scroll-behavior: smooth;
+    /*  스크롤이 스무스하게 움직이려면 필수!!  */
+  }
 body {
     font-family: 'Raleway', sans-serif;
     font-size: 16px;
     letter-spacing: -0.01em;
-    scroll-behavior: smooth; 
+    overflow-x: hidden;
 }
 section {
     margin-bottom: 150px;
@@ -55,15 +59,15 @@ header {
 header .inner {
     padding: 30px 50px 0;
 }
-header .inner .logo {
+header .logo {
     width: 150px;
     display: flex;
     justify-content: space-between;
 }
-header .inner .logo span {
+header .logo span {
     padding: 0 1px;
 }
-header .inner .logo span img {
+header .logo span img {
     width: 23px;
 }
 header .gnb {
@@ -524,4 +528,29 @@ header .gnb .menuBox.on li:nth-child(4) a {
 }
 .footer .logoWrap span img {
     width: 100%;
+}
+
+/* top btn */
+.top {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    text-transform: uppercase;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 10px;
+    opacity: .5;
+    transition: .3s;
+    padding: 5px 10px;
+}
+.top::before {
+    content: '\25B2';
+    transform: scaleX(1.5);
+}
+.top:hover {
+    opacity: 1;
+    padding: 10px 20px;
 }
