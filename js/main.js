@@ -16,6 +16,8 @@ window.onload = function(){
 
 
     gsap .registerPlugin(ScrollTrigger);
+
+    // visual logoWrap
     gsap.timeline({
         scrollTrigger: {
             trigger: '.visual',
@@ -31,4 +33,12 @@ window.onload = function(){
     .to('.logoWrap #e_2', {x: 30, y: 430, rotate: 20, ease: 'none', duration: 5}, 0)
     .to('.logoWrap #o', {x: 100, y: 290, rotate: -10, ease: 'none', duration: 5}, 0)
     .to('.logoWrap #n', {x: 50, y: 450, rotate: 20, ease: 'none', duration: 5}, 0)
+
+    // about textAni
+    let textAniList = document.querySelectorAll('.con1 .textAni ul li');
+    let textAni = gsap.timeline({repeat: -1});
+    for(let i = 0; i < textAniList.length; i++){
+        textAni.to(textAniList[i], 0.8 ,{ opacity:1, repeat: 1, delay:0, x:0, yoyo: true, ease: "power4.out"})
+    }
+    textAni.play();
 }
