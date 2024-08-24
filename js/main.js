@@ -33,24 +33,7 @@ window.onload = function(){
     .to('.logoWrap #o', {x:100, y:100, rotate:-10, ease:'none', duration:5,}, 0)
     .to('.logoWrap #n', {x:50, y:450, rotate:20, ease:'none', duration:5,}, 0)   
 
-    // about skill 가로 스크롤
-    ScrollTrigger.matchMedia({
-        '(min-width: 1024px)':function(){
-            let list = gsap.utils.toArray('.con1 .box .listBox li');
-            let scrollTween = gsap.to(list, {
-                xPercent: -100 * (list.length -1),
-                ease: 'none',
-                scrollTrigger: {
-                    trigger: '.con1 .box',
-                    pin: true,
-                    scrub: 1,
-                    start: 'center center',
-                    end: '300%',
-                    markers: true
-                }
-            });
-        }
-    })
+
 
     // about textAni
     let textAniList = document.querySelectorAll('.con1 .textAni ul li');
