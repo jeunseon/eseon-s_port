@@ -211,19 +211,25 @@ header .gnb .menuBox.on li:nth-child(4) a {
 }
 .con1 .box .listBox {
     display: flex;
-    flex-direction: row;
 }
 .con1 .box .listBox li {
-    width: 800px;
+    padding: 0% 3%;
 }
-.con1 .box .listBox li img {
-    max-width: 110px;
-    width: 100%;
+.con1 .box .listBox li h4 {
+    font-size: 20px;
+    width: 180px;
+    height: 180px;
+    line-height: 180px;
+    text-align: center;
+    background-image: url(/images/circle.svg);
+    background-repeat: no-repeat;
+    text-shadow: 0 0 10px #fff;
+    border-radius: 100%;
 }
+
 .con1 .textAni {
     position: relative;
     margin-top: 14px;
-
 }
 .con1 .textAni::before {
     content: '';
@@ -424,6 +430,7 @@ header .gnb .menuBox.on li:nth-child(4) a {
     position: absolute;
     opacity: 0;
     z-index: 100;
+    transform: scale(0);
 }
 
 /* footer */
