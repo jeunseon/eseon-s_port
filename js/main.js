@@ -55,4 +55,15 @@ window.onload = function(){
         }
     })
     .to('.logoWrap', {top: '20%', ease: 'none', duration: 5}, 0)
+
+    gsap.timeline({
+        scrollTrigger: {
+            trigger: '.wrap',
+            start: '5% 0%',
+            end: '10% 0%',
+            scrub: true,
+            markers: true
+        }
+    })
+    .to('.top', {opacity: '.5', ease: 'none', duration: 5}, 0)
 }
