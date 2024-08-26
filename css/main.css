@@ -361,35 +361,28 @@ header .gnb .menuBox.on li:nth-child(4) a {
     border-top: 1px solid #141212;
 }
 .con3 .listBox >li {
-    display: flex;
-    justify-content: space-between;
-    padding: 30px 0 30px 30px;
+    display: grid;
+    grid-template-columns: 2fr auto;
+    grid-template-rows: 2fr auto;
     box-sizing: border-box;
     border-bottom: 1px solid #141212;
 }
 .con3 .listBox >li .subText {
-    flex-grow: 1;
-    display: grid;
-    grid-template-rows: 2fr auto;
-    row-gap: 30px;
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
 }
 .con3 .listBox >li .subText h3 {
     font-size: 60px;
     letter-spacing: -3px;
-}
-.con3 .listBox >li .subText .hashBox {
-    display: flex;
-    justify-content: start;
-}
-.con3 .listBox >li .subText .hashBox >li {
-    margin-right: 10px;
-    opacity: .5;
+    padding: 30px 0;
 }
 .con3 .listBox >li .link-review {
     font-size: 20px;
     display: flex;
     flex-direction: row;
+    justify-content: end;
     align-items: center;
+    grid-row: 1 / 2;
     transition: .5s;
 }
 .con3 .listBox >li .link-review::before {
@@ -412,11 +405,24 @@ header .gnb .menuBox.on li:nth-child(4) a {
 .con3 .listBox >li .link-review:hover {
     font-size: 23px;
 }
+.con3 .listBox >li .hashBox {
+    display: flex;
+    justify-content: end;
+    padding: 0 0 10px;
+}
+.con3 .listBox >li .hashBox span {
+    margin-right: 10px;
+    opacity: .5;
+}
 .con3 .imgBox {
     position: absolute;
     opacity: 0;
     z-index: 100;
     transform: scale(0);
+}
+.con3 .imgBox img {
+    max-width: 500px;
+    border-radius: 10px;
 }
 
 /* footer */
