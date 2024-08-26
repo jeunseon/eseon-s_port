@@ -16,7 +16,6 @@ window.onload = function(){
 
 
     gsap .registerPlugin(ScrollTrigger);
-
     // visual logoWrap
     gsap.timeline({
         scrollTrigger: {
@@ -32,8 +31,6 @@ window.onload = function(){
     .to('.logoWrap #e_2', {x:50, y:300, rotate:10, ease:'none', duration:5,}, 0)
     .to('.logoWrap #o', {x:100, y:100, rotate:-10, ease:'none', duration:5,}, 0)
     .to('.logoWrap #n', {x:50, y:450, rotate:20, ease:'none', duration:5,}, 0)   
-
-
 
     // about textAni
     let textAniList = document.querySelectorAll('.con1 .textAni ul li');

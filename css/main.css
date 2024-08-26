@@ -96,7 +96,7 @@ header .gnb .menuOpen::before {
     transition: .3s;
 }
 header .gnb .menuOpen:hover::before {
-    width: 100px;
+    width: 120px;
 }
 header .gnb .menuBox {
     width: 99%;
@@ -113,6 +113,7 @@ header .gnb .menuBox {
 }
 header .gnb .menuBox li {
     overflow: hidden;
+    margin: 10px 0;
 }
 header .gnb .menuBox li a {
     display: block;
@@ -282,10 +283,12 @@ header .gnb .menuBox.on li:nth-child(4) a {
     border-radius: 10px;
     filter: brightness(50%);
     transition: .5s;
+    clip-path: inset(10px);
 }
 .con2 .listBox li a:hover {
     filter: brightness(100%);
     box-shadow: 0 0 10px rgba(255, 255, 255, .3);
+    clip-path: inset(0);
 }
 .con2 .listBox li a[data-img="1"] {
     background-image: url(https://eunseon-portfolio.netlify.app/img/event.jpg);
