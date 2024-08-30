@@ -32,6 +32,16 @@ window.onload = function(){
     .to('.logoWrap #o', {x:100, y:100, rotate:-10, ease:'none', duration:5,}, 0)
     .to('.logoWrap #n', {x:50, y:450, rotate:20, ease:'none', duration:5,}, 0)   
 
+    // skills ani
+    gsap.timeline({
+        scrollTrigger: {
+            trigger: '.con1',
+            start: '0% 100%',
+            end: '100% 0%',
+            toggleClass: {targets:'.listBox', className: 'textMotion'}
+        }
+    })
+
     // about textAni
     let textAniList = document.querySelectorAll('.con1 .textAni ul li');
     let textAni = gsap.timeline({repeat: -1});

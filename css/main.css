@@ -212,6 +212,60 @@ header .gnb .menuBox.on li:nth-child(4) a {
 }
 .con1 .box .listBox {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 4vw;
+    flex-grow: 0;
+    row-gap: 3vw;
+}
+.con1 .listBox li {
+    overflow: hidden;
+}
+.con1 .listBox li div {
+    margin-right: 3vw;
+    font-weight: 300;
+    letter-spacing: -1px;
+}
+.con1 .listBox li .bold {font-weight: bold;}
+.con1 .listBox li .normal {font-weight: 400;}
+.con1 .listBox li .end {margin-right: 1vw;}
+/* textMotion */
+.con1 .listBox.textMotion li .tp {animation: slideDown 1s linear forwards;}
+.con1 .listBox.textMotion li .bot {animation: slideUp 1s linear forwards;}
+.con1 .listBox.textMotion li .left {animation: slideRigt 1s linear forwards;}
+.con1 .listBox.textMotion li .rit {animation: slideLeft 1s linear forwards;}
+.con1 .listBox.textMotion .cet span {opacity: 0; animation: scaleMotion 1s linear forwards;}
+.listBox.textMotion .cet span:nth-child(1) {animation-delay: 0.25s;}
+.listBox.textMotion .cet span:nth-child(2) {animation-delay: 0.35s;}
+.listBox.textMotion .cet span:nth-child(3) {animation-delay: 0.45s;}
+.listBox.textMotion .cet span:nth-child(4) {animation-delay: 0.55s;}
+.listBox.textMotion .cet span:nth-child(5) {animation-delay: 0.6s;}
+.listBox.textMotion .cet span:nth-child(6) {animation-delay: 0.65s;}
+.listBox.textMotion .cet span:nth-child(7) {animation-delay: 0.7s;}
+.listBox.textMotion .cet span:nth-child(8) {animation-delay: 0.75s;}
+.listBox.textMotion .cet span:nth-child(9) {animation-delay: 0.8s;}
+.listBox.textMotion .cet span:nth-child(10) {animation-delay: 0.85s;}
+
+@keyframes slideUp {
+    0% {transform:translateY(100%)}
+    100% {transform:translateY(0)}
+}
+@keyframes slideDown {
+    0% {transform:translateY(-100%)}
+    100% {transform:translateY(0)}
+}
+@keyframes slideLeft {
+    0% {transform:translateX(-100%)}
+    100% {transform:translateX(0)}
+}
+@keyframes slideRigt {
+    0% {transform:translateX(100%)}
+    100% {transform:translateX(0)}
+}
+@keyframes scaleMotion {
+    0% {transform: scale(1.5); opacity: 0;}
+    100% {transform: scale(1); opacity: 1;}
 }
 
 .con1 .textAni {
@@ -542,7 +596,7 @@ header .gnb .menuBox.on li:nth-child(4) a {
 }
 
 /* top btn */
-.top {
+.btn.top {
     position: fixed;
     bottom: 10px;
     right: 10px;
@@ -557,11 +611,11 @@ header .gnb .menuBox.on li:nth-child(4) a {
     transition: .3s;
     padding: 5px 10px;
 }
-.top::before {
+.btn.top::before {
     content: '\25B2';
     transform: scaleX(1.5);
 }
-.top:hover {
+.btn.top:hover {
     opacity: 1 !important;
     padding: 10px 20px;
 }
