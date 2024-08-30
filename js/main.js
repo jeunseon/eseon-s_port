@@ -85,13 +85,14 @@ window.onload = function(){
     })
     .to('.logoWrap', {top: '20%', ease: 'none', duration: 5}, 0)
 
+    // topButton
     gsap.timeline({
         scrollTrigger: {
             trigger: '.wrap',
             start: '5% 0%',
-            end: '10% 0%',
+            end: '8% 0%',
             scrub: true
         }
     })
-    .to('.top', {opacity: '.5', ease: 'none', duration: 5}, 0)
+    .to('.top', {opacity: '.5', x:0, ease: 'none', duration: 5}, 0)
 }
