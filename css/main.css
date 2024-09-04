@@ -502,7 +502,7 @@ header .gnb .menuBox.on li:nth-child(4) a {
 }
 .footer .inner{
     position: relative;
-    padding: 75px 80px 50px;
+    padding: 75px 100px 50px;
     box-sizing: border-box;
     height: 100vh;
     z-index: 2;
@@ -516,58 +516,22 @@ header .gnb .menuBox.on li:nth-child(4) a {
     backdrop-filter: blur(100px);
     display: flex;
     flex-direction: column;
-    padding-top: 50px;
+    padding-top: 100px;
     flex-grow: 1;
 }
 .footer .box .mainTextBox {
     align-self: center;
     text-transform: uppercase;
     letter-spacing: -1px;
+    flex: 1;
 }
 .footer .box .mainTextBox h2 {
-    font-size: 110px;
+    font-size: 120px;
     font-style: italic;
 }
 .footer .box .mainTextBox p {
-    font-size: 50px;
+    font-size: 60px;
     font-style: normal;
-}
-.footer .box .talkBtn {
-    display: grid;
-    flex-grow: 1;
-    place-items: center;
-    align-items: center;
-}
-.footer .box .talkBtn a {
-    display: block;
-    width: 160px;
-    height: 160px;
-    border-radius: 100%;
-    background-color: #fff;
-    position: relative;
-    box-shadow: 0 0 0 13px #1c1c1c, 0 0 50px rgba(255, 255, 255, .3);
-}
-.footer .box .talkBtn a span {
-    font-size: 15px;
-    text-transform: uppercase;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 85%;
-    height: 85%;
-    background-color: #141212;
-    border-radius: 100%;
-    transition: .5s;
-    text-align: center;
-    align-content: center;
-}
-.footer .box .talkBtn a span:hover {
-    width: 95%;
-    height: 95%;
-}
-.footer .box .talkBtn a span::after {
-    content: '\21C0';
 }
 .footer .box .btnBox {
     border-top: 1px solid rgba(255, 255, 255, .2);
@@ -581,7 +545,7 @@ header .gnb .menuBox.on li:nth-child(4) a {
     background: none;
     color: #fff;
     opacity: .5;
-    margin: 20px;
+    margin: 25px;
     padding: 10px;
     transition: .5s;
 }
