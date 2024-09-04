@@ -51,7 +51,25 @@ window.onload = function(){
     textAni.play();
 
     // design
-
+    gsap.utils.toArray('.con2 .listBox li').forEach((selector, idx) => {
+        ScrollTrigger.create({
+            trigger: selector,
+            start: '30% 70%',
+            onEnter:() => {
+                gsap.set(selector, {
+                    rotationX:'-65deg',
+                    z:'-500px',
+                    opacity:0
+                }),
+                gsap.to(selector, {
+                    rotationX:0,
+                    z:0,
+                    opacity:1,
+                    delay: idx % 3 * 0.05
+                })
+            }
+        })
+    })
 
     // project
     let listBox = document.querySelectorAll('.con3 .listBox>li .subText');

@@ -325,6 +325,7 @@ header .gnb .menuBox.on li:nth-child(4) a {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    perspective: 1000px;
 }
 .con2 .listBox li {
     width: 32.2%;
@@ -441,6 +442,7 @@ header .gnb .menuBox.on li:nth-child(4) a {
     font-size: 60px;
     letter-spacing: -3px;
     padding: 30px 0;
+    text-indent: 30px;
     transition: .5s;
 }
 .con3 .listBox >li:hover .subText h3 {
@@ -474,6 +476,7 @@ header .gnb .menuBox.on li:nth-child(4) a {
 }
 .con3 .listBox >li .link-review:hover {
     font-size: 23px;
+    opacity: .6;
 }
 .con3 .listBox >li .hashBox {
     display: flex;
