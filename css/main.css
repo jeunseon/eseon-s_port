@@ -529,9 +529,8 @@ header .gnb .menuBox.on li:nth-child(4) a {
     font-size: 120px;
     font-style: italic;
 }
-.footer .box .mainTextBox p {
-    font-size: 60px;
-    font-style: normal;
+.footer .box .mainTextBox h2 span {
+    display: block;
 }
 .footer .box .btnBox {
     border-top: 1px solid rgba(255, 255, 255, .2);

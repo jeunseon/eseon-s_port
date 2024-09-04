@@ -50,6 +50,8 @@ window.onload = function(){
     }
     textAni.play();
 
+    // design
+
 
     // project
     let listBox = document.querySelectorAll('.con3 .listBox>li .subText');
