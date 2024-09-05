@@ -27,6 +27,7 @@ section {
 }
 .inner {
     padding: 0 50px;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 .box {
@@ -39,18 +40,19 @@ section {
     color: #000;
     border-radius: 30px;
     padding: 12px 25px;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     margin-top: 30px;
     text-transform: uppercase;
     display: inline-block;
 }
-
 .wrap {
     margin: 0 auto;
     position: relative;
     background: #141212;
     color: #fff;
 }
+
 header {
     position: fixed;
     width: 100%;
@@ -61,7 +63,11 @@ header .inner {
 }
 header .logo {
     width: 150px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
 }
 header .logo span {
@@ -78,6 +84,8 @@ header .gnb .menuOpen {
     position: absolute;
     top: 10px;
     left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
     transform: translateX(-50%);
     padding: 30px 0;
     z-index: 10;
@@ -91,8 +99,12 @@ header .gnb .menuOpen::before {
     position: absolute;
     top: 15px;
     left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
     transform: translateX(-50%);
     border-radius: 30px;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
     transition: .3s;
 }
 header .gnb .menuOpen:hover::before {
@@ -103,12 +115,18 @@ header .gnb .menuBox {
     position: absolute;
     top: -1000%;
     left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
     transform: translateX(-50%);
     background-color: rgba(55, 55, 55, .4);
+    -webkit-backdrop-filter: blur(30px);
     backdrop-filter: blur(30px);
     border-radius: 5px;
     padding: 100px 0 30px;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
+    -webkit-transition: 1.5s;
+    -o-transition: 1.5s;
     transition: 1.5s;
 }
 header .gnb .menuBox li {
@@ -118,36 +136,55 @@ header .gnb .menuBox li {
 header .gnb .menuBox li a {
     display: block;
     font-size: 40px;
+    -webkit-transform: translateY(-100px);
+    -ms-transform: translateY(-100px);
     transform: translateY(-100px);
+    -webkit-transition: .6s;
+    -o-transition: .6s;
     transition: .6s;
 }
 header .gnb .menuBox.on {
     top: 10px;
+    -webkit-transition: .4s;
+    -o-transition: .4s;
     transition: .4s;
 }
 header .gnb .menuBox.on li a {
+    -webkit-transform: translateY(0px);
+    -ms-transform: translateY(0px);
     transform: translateY(0px);
 }
 header .gnb .menuBox.on li:nth-child(2) a {
+    -webkit-transition-delay: .05s;
+    -o-transition-delay: .05s;
     transition-delay: .05s;
 }
 header .gnb .menuBox.on li:nth-child(3) a {
+    -webkit-transition-delay: .1s;
+    -o-transition-delay: .1s;
     transition-delay: .1s;
 }
 header .gnb .menuBox.on li:nth-child(4) a {
+    -webkit-transition-delay: .15s;
+    -o-transition-delay: .15s;
     transition-delay: .15s;
 }
 
 /* visual */
 .visual .inner {
+    display: -ms-grid;
     display: grid;
     height: 100vh;
     padding: 25px 50px 25px;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
+    -ms-grid-rows: auto 1fr auto;
     grid-template-rows: auto 1fr auto;
 }
 .visual .mainText {
     font-size: 80px;
+    max-width: -webkit-fit-content;
+    max-width: -moz-fit-content;
     max-width: fit-content;
     margin-left: auto;
     font-weight: normal;
@@ -164,6 +201,7 @@ header .gnb .menuBox.on li:nth-child(4) a {
 .visual .subText {
     font-weight: normal;
     font-size: 20px;
+    -ms-flex-item-align: end;
     align-self: flex-end;
     margin-bottom: 50px;
 }
@@ -171,7 +209,11 @@ header .gnb .menuBox.on li:nth-child(4) a {
     color: #585858;
 }
 .visual .logoWrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
 }
 .visual .logoWrap span {
@@ -185,6 +227,7 @@ header .gnb .menuBox.on li:nth-child(4) a {
 .con1 .box {
     padding: 60px;
     background: rgba(55, 55, 55, .4);
+    -webkit-backdrop-filter: blur(100px);
     backdrop-filter: blur(100px);
 }
 .con1 .box .mainText {
@@ -208,14 +251,25 @@ header .gnb .menuBox.on li:nth-child(4) a {
     position: absolute;
     top: 50%;
     right: 0;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
     transform: translateY(-50%);
 }
 .con1 .box .listBox {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     font-size: 4vw;
+    -webkit-box-flex: 0;
+    -ms-flex-positive: 0;
     flex-grow: 0;
     row-gap: 3vw;
 }
@@ -230,42 +284,63 @@ header .gnb .menuBox.on li:nth-child(4) a {
 .con1 .listBox li .bold {font-weight: bold;}
 .con1 .listBox li .normal {font-weight: 400;}
 .con1 .listBox li .end {margin-right: 1vw;}
-/* textMotion */
-.con1 .listBox.textMotion li .tp {animation: slideDown 1s linear forwards;}
-.con1 .listBox.textMotion li .bot {animation: slideUp 1s linear forwards;}
-.con1 .listBox.textMotion li .left {animation: slideRigt 1s linear forwards;}
-.con1 .listBox.textMotion li .rit {animation: slideLeft 1s linear forwards;}
-.con1 .listBox.textMotion .cet span {opacity: 0; animation: scaleMotion 1s linear forwards;}
-.listBox.textMotion .cet span:nth-child(1) {animation-delay: 0.25s;}
-.listBox.textMotion .cet span:nth-child(2) {animation-delay: 0.35s;}
-.listBox.textMotion .cet span:nth-child(3) {animation-delay: 0.45s;}
-.listBox.textMotion .cet span:nth-child(4) {animation-delay: 0.55s;}
-.listBox.textMotion .cet span:nth-child(5) {animation-delay: 0.6s;}
-.listBox.textMotion .cet span:nth-child(6) {animation-delay: 0.65s;}
-.listBox.textMotion .cet span:nth-child(7) {animation-delay: 0.7s;}
-.listBox.textMotion .cet span:nth-child(8) {animation-delay: 0.75s;}
-.listBox.textMotion .cet span:nth-child(9) {animation-delay: 0.8s;}
-.listBox.textMotion .cet span:nth-child(10) {animation-delay: 0.85s;}
 
+/* textMotion */
+.con1 .listBox.textMotion li .tp {-webkit-animation: slideDown 1s linear forwards;animation: slideDown 1s linear forwards;}
+.con1 .listBox.textMotion li .bot {-webkit-animation: slideUp 1s linear forwards;animation: slideUp 1s linear forwards;}
+.con1 .listBox.textMotion li .left {-webkit-animation: slideRigt 1s linear forwards;animation: slideRigt 1s linear forwards;}
+.con1 .listBox.textMotion li .rit {-webkit-animation: slideLeft 1s linear forwards;animation: slideLeft 1s linear forwards;}
+.con1 .listBox.textMotion .cet span {opacity: 0; -webkit-animation: scaleMotion 1s linear forwards; animation: scaleMotion 1s linear forwards;}
+.listBox.textMotion .cet span:nth-child(1) {-webkit-animation-delay: 0.25s;animation-delay: 0.25s;}
+.listBox.textMotion .cet span:nth-child(2) {-webkit-animation-delay: 0.35s;animation-delay: 0.35s;}
+.listBox.textMotion .cet span:nth-child(3) {-webkit-animation-delay: 0.45s;animation-delay: 0.45s;}
+.listBox.textMotion .cet span:nth-child(4) {-webkit-animation-delay: 0.55s;animation-delay: 0.55s;}
+.listBox.textMotion .cet span:nth-child(5) {-webkit-animation-delay: 0.6s;animation-delay: 0.6s;}
+.listBox.textMotion .cet span:nth-child(6) {-webkit-animation-delay: 0.65s;animation-delay: 0.65s;}
+.listBox.textMotion .cet span:nth-child(7) {-webkit-animation-delay: 0.7s;animation-delay: 0.7s;}
+.listBox.textMotion .cet span:nth-child(8) {-webkit-animation-delay: 0.75s;animation-delay: 0.75s;}
+.listBox.textMotion .cet span:nth-child(9) {-webkit-animation-delay: 0.8s;animation-delay: 0.8s;}
+.listBox.textMotion .cet span:nth-child(10) {-webkit-animation-delay: 0.85s;animation-delay: 0.85s;}
+
+@-webkit-keyframes slideUp {
+    0% {-webkit-transform:translateY(100%);transform:translateY(100%)}
+    100% {-webkit-transform:translateY(0);transform:translateY(0)}
+}
 @keyframes slideUp {
-    0% {transform:translateY(100%)}
-    100% {transform:translateY(0)}
+    0% {-webkit-transform:translateY(100%);transform:translateY(100%)}
+    100% {-webkit-transform:translateY(0);transform:translateY(0)}
+}
+@-webkit-keyframes slideDown {
+    0% {-webkit-transform:translateY(-100%);transform:translateY(-100%)}
+    100% {-webkit-transform:translateY(0);transform:translateY(0)}
 }
 @keyframes slideDown {
-    0% {transform:translateY(-100%)}
-    100% {transform:translateY(0)}
+    0% {-webkit-transform:translateY(-100%);transform:translateY(-100%)}
+    100% {-webkit-transform:translateY(0);transform:translateY(0)}
+}
+@-webkit-keyframes slideLeft {
+    0% {-webkit-transform:translateX(-100%);transform:translateX(-100%)}
+    100% {-webkit-transform:translateX(0);transform:translateX(0)}
 }
 @keyframes slideLeft {
-    0% {transform:translateX(-100%)}
-    100% {transform:translateX(0)}
+    0% {-webkit-transform:translateX(-100%);transform:translateX(-100%)}
+    100% {-webkit-transform:translateX(0);transform:translateX(0)}
+}
+@-webkit-keyframes slideRigt {
+    0% {-webkit-transform:translateX(100%);transform:translateX(100%)}
+    100% {-webkit-transform:translateX(0);transform:translateX(0)}
 }
 @keyframes slideRigt {
-    0% {transform:translateX(100%)}
-    100% {transform:translateX(0)}
+    0% {-webkit-transform:translateX(100%);transform:translateX(100%)}
+    100% {-webkit-transform:translateX(0);transform:translateX(0)}
+}
+@-webkit-keyframes scaleMotion {
+    0% {-webkit-transform: scale(1.5);transform: scale(1.5); opacity: 0;}
+    100% {-webkit-transform: scale(1);transform: scale(1); opacity: 1;}
 }
 @keyframes scaleMotion {
-    0% {transform: scale(1.5); opacity: 0;}
-    100% {transform: scale(1); opacity: 1;}
+    0% {-webkit-transform: scale(1.5);transform: scale(1.5); opacity: 0;}
+    100% {-webkit-transform: scale(1);transform: scale(1); opacity: 1;}
 }
 
 .con1 .textAni {
@@ -281,7 +356,14 @@ header .gnb .menuBox.on li:nth-child(4) a {
     position: absolute;
     top: 0;
     right: 0;
+    -webkit-animation: circle linear 1.5s 0s infinite;
     animation: circle linear 1.5s 0s infinite;
+}
+@-webkit-keyframes circle {
+    0% {opacity: 0;}
+    30% {opacity: 1;}
+    80% {opacity: 1;}
+    100% {opacity: 0;}
 }
 @keyframes circle {
     0% {opacity: 0;}
@@ -289,6 +371,7 @@ header .gnb .menuBox.on li:nth-child(4) a {
     80% {opacity: 1;}
     100% {opacity: 0;}
 }
+
 .con1 .textAni ul {
     display: grid;
     max-width: 800px;
@@ -297,15 +380,23 @@ header .gnb .menuBox.on li:nth-child(4) a {
     font-size: 60px;
     text-transform: uppercase;
     letter-spacing: -1px;
+    -ms-grid-column: 1;
     grid-column-start: 1;
+    -ms-grid-row: 1;
     grid-row-start: 1;
     opacity: 0;
+    -webkit-transform: translateX(30px);
+    -ms-transform: translateX(30px);
     transform: translateX(30px);
 }
 
 /* con2 design */
 .con2 .inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
 }
 .con2 .textBox {
@@ -376,18 +467,26 @@ header .gnb .menuBox.on li:nth-child(4) a {
     display: block;
     padding: 30% 0;
     height: 100%;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     border-radius: 10px;
+    -webkit-filter: brightness(50%);
     filter: brightness(50%);
+    -webkit-transition: .5s;
+    -o-transition: .5s;
     transition: .5s;
+    -webkit-clip-path: inset(10px);
     clip-path: inset(10px);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
 .con2 .listBox li a:hover {
+    -webkit-filter: brightness(100%);
     filter: brightness(100%);
+    -webkit-box-shadow: 0 0 10px rgba(255, 255, 255, .3);
     box-shadow: 0 0 10px rgba(255, 255, 255, .3);
+    -webkit-clip-path: inset(0);
     clip-path: inset(0);
 }
 .con2 .listBox li a[data-img="1"] {
@@ -442,14 +541,22 @@ header .gnb .menuBox.on li:nth-child(4) a {
     border-top: 1px solid #141212;
 }
 .con3 .listBox >li {
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 2fr auto;
     grid-template-columns: 2fr auto;
+    -ms-grid-rows: 2fr auto;
     grid-template-rows: 2fr auto;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     border-bottom: 1px solid #141212;
 }
 .con3 .listBox >li .subText {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
     grid-column: 1 / 2;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
     grid-row: 1 / 3;
 }
 .con3 .listBox >li .subText h3 {
@@ -457,6 +564,8 @@ header .gnb .menuBox.on li:nth-child(4) a {
     letter-spacing: -3px;
     padding: 30px 0;
     text-indent: 30px;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
     transition: .5s;
 }
 .con3 .listBox >li:hover .subText h3 {
@@ -465,11 +574,24 @@ header .gnb .menuBox.on li:nth-child(4) a {
 }
 .con3 .listBox >li .link-review {
     font-size: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
     justify-content: end;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
     grid-row: 1 / 2;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
     transition: .5s;
 }
 .con3 .listBox >li .link-review::before {
@@ -494,7 +616,11 @@ header .gnb .menuBox.on li:nth-child(4) a {
     opacity: .6;
 }
 .con3 .listBox >li .hashBox {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
     justify-content: end;
     padding: 0 0 10px;
 }
@@ -506,6 +632,8 @@ header .gnb .menuBox.on li:nth-child(4) a {
     position: absolute;
     opacity: 0;
     z-index: 100;
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
     transform: scale(0);
 }
 .con3 .imgBox img {
@@ -521,26 +649,45 @@ header .gnb .menuBox.on li:nth-child(4) a {
 .footer .inner{
     position: relative;
     padding: 75px 100px 50px;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     height: 100vh;
     z-index: 2;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
 }
 .footer .box {
     padding: 50px 0 0;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     background: rgba(55, 55, 55, .4);
+    -webkit-backdrop-filter: blur(100px);
     backdrop-filter: blur(100px);
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     padding-top: 100px;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
     flex-grow: 1;
 }
 .footer .box .mainTextBox {
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
     align-self: center;
     text-transform: uppercase;
     letter-spacing: -1px;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
     flex: 1;
 }
 .footer .box .mainTextBox h2 {
@@ -552,8 +699,15 @@ header .gnb .menuBox.on li:nth-child(4) a {
 }
 .footer .box .btnBox {
     border-top: 1px solid rgba(255, 255, 255, .2);
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
 }
 .footer .box .btnBox .btn {
@@ -564,6 +718,8 @@ header .gnb .menuBox.on li:nth-child(4) a {
     opacity: .5;
     margin: 25px;
     padding: 10px;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
     transition: .5s;
 }
 .footer .box .btnBox .btn:hover {
@@ -575,7 +731,11 @@ header .gnb .menuBox.on li:nth-child(4) a {
     text-align: center;
 }
 .footer .logoWrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     position: absolute;
     top: -50%;
@@ -596,18 +756,29 @@ header .gnb .menuBox.on li:nth-child(4) a {
     right: 10px;
     text-transform: uppercase;
     z-index: 100;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     text-align: center;
     cursor: pointer;
     border-radius: 10px;
     opacity: 0;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
     transition: .3s;
     padding: 5px 10px;
+    -webkit-transform: translateX(100%);
+    -ms-transform: translateX(100%);
     transform: translateX(100%);
 }
 .btn.top::before {
     content: '\25B2';
+    -webkit-transform: scaleX(1.5);
+    -ms-transform: scaleX(1.5);
     transform: scaleX(1.5);
 }
 .btn.top:hover {
