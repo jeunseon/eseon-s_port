@@ -317,28 +317,73 @@ header .gnb .menuBox.on li:nth-child(4) a {
     position: -webkit-sticky;
     position: sticky;
     top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     letter-spacing: -1px;
 }
 .con2 .listBox {
     width: 70%;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1rem 1fr 1rem 1fr 1rem 1fr 1rem 1fr 1rem 1fr 1rem 1fr;
+    grid-template-columns: repeat(7, 1fr);
+    grid-auto-rows: minmax(50px, auto);
+    gap: 1rem;
+    -webkit-perspective: 1000px;
     perspective: 1000px;
 }
 .con2 .listBox li {
-    width: 32.2%;
-    margin-bottom: 50px;
+    opacity: 0;
+}
+.con2 .listBox li:nth-child(1) {
+    grid-column: 1/4 span;
+    grid-row: 1/1 span;
+}
+.con2 .listBox li:nth-child(2) {
+    grid-column: 5/3 span;
+    grid-row: 6/5 span;
+}
+.con2 .listBox li:nth-child(3) {
+    grid-column: 2/3 span;
+    grid-row: 6/1 span;
+}
+.con2 .listBox li:nth-child(4) {
+    grid-column: 1/4 span;
+    grid-row: 2/4 span;
+}
+.con2 .listBox li:nth-child(5) {
+    grid-column: 1/3 span;
+    grid-row: 11/5 span;
+}
+.con2 .listBox li:nth-child(6) {
+    grid-column: 1/4 span;
+    grid-row: 7/4 span;
+}
+.con2 .listBox li:nth-child(7) {
+    grid-column: 4/3 span;
+    grid-row: 11/4 span;
+}
+.con2 .listBox li:nth-child(8) {
+    grid-column: 5/3 span;
+    grid-row: 15/1 span;
+}
+.con2 .listBox li:nth-child(9) {
+    grid-column: 5/3 span;
+    grid-row: 1/5 span;
 }
 .con2 .listBox li a {
     display: block;
-    padding: 45% 0;
+    padding: 30% 0;
+    height: 100%;
     box-sizing: border-box;
     border-radius: 10px;
     filter: brightness(50%);
     transition: .5s;
     clip-path: inset(10px);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 .con2 .listBox li a:hover {
     filter: brightness(100%);
@@ -347,66 +392,35 @@ header .gnb .menuBox.on li:nth-child(4) a {
 }
 .con2 .listBox li a[data-img="1"] {
     background-image: url(https://eunseon-portfolio.netlify.app/img/event.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    margin-top: 15px;
 }
 .con2 .listBox li a[data-img="2"] {
     background-image: url(https://eunseon-portfolio.netlify.app/img/lotteon.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    margin-top: -50px;
 }
 .con2 .listBox li a[data-img="3"] {
     background-image: url(https://eunseon-portfolio.netlify.app/img/shoping.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    margin-top: 30px;
 }
 .con2 .listBox li a[data-img="4"] {
     background-image: url(/images/wemake.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    margin-top: 15px;
 }
 .con2 .listBox li a[data-img="5"] {
     background-image: url(/images/black.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    margin-top: -50px;
+
 }
 .con2 .listBox li a[data-img="6"] {
     background-image: url(/images/wemake2.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    margin-top: 30px;
+
 }
 .con2 .listBox li a[data-img="7"] {
     background-image: url(/images/lotte.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    margin-top: 15px;
+
 }
 .con2 .listBox li a[data-img="8"] {
     background-image: url(/images/kakao.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    margin-top: -50px;
+
 }
 .con2 .listBox li a[data-img="9"] {
     background-image: url(https://eunseon-portfolio.netlify.app/img/11_intro.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    margin-top: 30px;
+
 }
 
 /* con3 project */
@@ -447,6 +461,7 @@ header .gnb .menuBox.on li:nth-child(4) a {
 }
 .con3 .listBox >li:hover .subText h3 {
     opacity: .6;
+    text-indent: 0;
 }
 .con3 .listBox >li .link-review {
     font-size: 20px;

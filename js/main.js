@@ -54,7 +54,7 @@ window.onload = function(){
     gsap.utils.toArray('.con2 .listBox li').forEach((selector, idx) => {
         ScrollTrigger.create({
             trigger: selector,
-            start: '30% 70%',
+            start: '20% 70%',
             onEnter:() => {
                 gsap.set(selector, {
                     rotationX:'-65deg',
