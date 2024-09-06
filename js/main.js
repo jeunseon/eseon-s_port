@@ -115,4 +115,45 @@ window.onload = function(){
         }
     })
     .to('.top', {opacity: '.5', x:0, ease: 'none', duration: 5}, 0)
+
+    // cursor
+    const bigBall = document.querySelector('.cursor_ball_b');
+    const smallBall = document.querySelector('.cursor_ball_s');
+    // hover시 바뀌는 부분
+    let hoverables = document.querySelectorAll('.hoverable');
+
+    document.body.addEventListener('mousemove', onMouseMove);
+    for(let i = 0; i < hoverables.length; i++){
+        hoverables[i].addEventListener('mouseenter', onMouseHover);
+        hoverables[i].addEventListener('mouseleave', onMouseHoverOut);
+    }
+
+    // Move cursor
+    function onMouseMove(e){
+        gsap.to(bigBall, {
+            duration: .4,
+            x: e.pageX -15,
+            y: e.pageY -15
+        })
+        gsap.to(smallBall, {
+            duration: .1,
+            x: e.pageX -5,
+            y: e.pageY -7
+        })
+    }
+
+    // Hover an element
+    function onMouseHover(){
+        gsap.to(bigBall, {
+            duration: .3,
+            scale: 4
+        })
+    }
+
+    function onMouseHoverOut(){
+        gsap.to(bigBall, {
+            duration: .3,
+            scale: 1
+        })  
+    }
 }

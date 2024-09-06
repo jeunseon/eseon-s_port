@@ -11,13 +11,15 @@
     <!-- scrollTrigger  -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script> -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
     
 </head>
 <body>
     <div class="wrap">
         <header id="header" class="header">
             <div class="inner">
-                <a href="/" class="logo">
+                <a href="/" class="logo hoverable">
                     <span><img src="./images/logo/S_J.svg" alt="logo j"></span>
                     <span><img src="./images/logo/S_E.svg" alt="logo e"></span>
                     <span><img src="./images/logo/S_S.svg" alt="logo s"></span>
@@ -26,11 +28,11 @@
                     <span><img src="./images/logo/S_N.svg" alt="logo n"></span>
                 </a>
                 <nav class="gnb">
-                    <p class="menuOpen">MENU</p>
+                    <p class="menuOpen hoverable">MENU</p>
                     <ul class="menuBox">
-                        <li><a href="#design">DESIGN</a></li>
-                        <li><a href="#project">PROJECT</a></li>
-                        <li><a href="#contact">CONTACT</a></li>
+                        <li><a href="#design" class="hoverable">DESIGN</a></li>
+                        <li><a href="#project" class="hoverable">PROJECT</a></li>
+                        <li><a href="#contact" class="hoverable">CONTACT</a></li>
                     </ul>
                 </nav>
             </div>
@@ -131,15 +133,15 @@
                     <h3>My Design</h3>
                 </div>
                 <ul class="listBox">
-                    <li><a href="https://eunseon-portfolio.netlify.app/img/event.jpg" data-img="1" target="_blank" title="1+1 flex event"></a></li>
-                    <li><a href="https://eunseon-portfolio.netlify.app/img/lotteon.jpg" data-img="2" target="_blank" title="롯데온 타임딜"></a></li>
-                    <li><a href="https://eunseon-portfolio.netlify.app/img/shoping.jpg" data-img="3" target="_blank" title="코몽트 summer luckday"></a></li>
-                    <li><a href="/images/wemake.jpg" data-img="4" target="_blank" title="코모트X위메프"></a></li>
-                    <li><a href="/images/black.jpg" data-img="5" target="_blank" title="코몽트 블랙프라이데이"></a></li>
-                    <li><a href="/images/wemake2.jpg" data-img="6" target="_blank" title="코몽트X위메프 상반기 쿠폰"></a></li>
-                    <li><a href="/images/lotte.jpg" data-img="7" target="_blank" title="코몽트X롯데아이몰"></a></li>
-                    <li><a href="/images/kakao.jpg" data-img="8" target="_blank" title="카카오톡 플러스 친구"></a></li>
-                    <li><a href="https://eunseon-portfolio.netlify.app/img/11_intro.jpg" data-img="9" target="_blank" title="코몽트 소개"></a></li>
+                    <li><a class="hoverable" href="https://eunseon-portfolio.netlify.app/img/event.jpg" data-img="1" target="_blank" title="1+1 flex event"></a></li>
+                    <li><a class="hoverable" href="https://eunseon-portfolio.netlify.app/img/lotteon.jpg" data-img="2" target="_blank" title="롯데온 타임딜"></a></li>
+                    <li><a class="hoverable" href="https://eunseon-portfolio.netlify.app/img/shoping.jpg" data-img="3" target="_blank" title="코몽트 summer luckday"></a></li>
+                    <li><a class="hoverable" href="/images/wemake.jpg" data-img="4" target="_blank" title="코모트X위메프"></a></li>
+                    <li><a class="hoverable" href="/images/black.jpg" data-img="5" target="_blank" title="코몽트 블랙프라이데이"></a></li>
+                    <li><a class="hoverable" href="/images/wemake2.jpg" data-img="6" target="_blank" title="코몽트X위메프 상반기 쿠폰"></a></li>
+                    <li><a class="hoverable" href="/images/lotte.jpg" data-img="7" target="_blank" title="코몽트X롯데아이몰"></a></li>
+                    <li><a class="hoverable" href="/images/kakao.jpg" data-img="8" target="_blank" title="카카오톡 플러스 친구"></a></li>
+                    <li><a class="hoverable" href="https://eunseon-portfolio.netlify.app/img/11_intro.jpg" data-img="9" target="_blank" title="코몽트 소개"></a></li>
                 </ul>
             </div>
         </section>
@@ -150,10 +152,10 @@
                 </div>
                 <ul class="listBox">
                     <li>
-                        <a class="subText" href="http://euns420.dothome.co.kr/spo/" title="대검찰청" target="_blank">
+                        <a class="subText  hoverable" href="http://euns420.dothome.co.kr/spo/" title="대검찰청" target="_blank">
                             <h3>대검찰청</h3>
                         </a>
-                        <a class="link-review" href="https://github.com/jeunseon/spo" target="_blank">code review</a>
+                        <a class="link-review hoverable" href="https://github.com/jeunseon/spo" target="_blank">code review</a>
                         <div class="hashBox">
                             <span># PC</span>
                             <span># API</span>
@@ -162,10 +164,10 @@
                         </div>
                     </li>
                     <li>
-                        <a class="subText" href="https://jeunseon.github.io/savethechildren/" title="세이브 더 칠드런" target="_blank">
+                        <a class="subText hoverable" href="https://jeunseon.github.io/savethechildren/" title="세이브 더 칠드런" target="_blank">
                             <h3>SAVE THE CHILDREN</h3>
                         </a>
-                        <a class="link-review" href="https://github.com/jeunseon/savethechildren" target="_blank">code review</a>
+                        <a class="link-review hoverable" href="https://github.com/jeunseon/savethechildren" target="_blank">code review</a>
                         <div class="hashBox">
                             <span># PC</span>
                             <span># mobile</span>
@@ -174,10 +176,10 @@
                         </div>
                     </li>
                     <li>
-                        <a class="subText" href="https://jeunseon.github.io/montraum/" title="몬트라움" target="_blank">
+                        <a class="subText hoverable" href="https://jeunseon.github.io/montraum/" title="몬트라움" target="_blank">
                             <h3>MONTRAUM</h3>
                         </a>
-                        <a class="link-review" href="https://github.com/jeunseon/montraum" target="_blank">code review</a>
+                        <a class="link-review hoverable" href="https://github.com/jeunseon/montraum" target="_blank">code review</a>
                         <div class="hashBox">
                             <span># mobile</span>
                             <span># swiper</span>
@@ -185,14 +187,24 @@
                         </div>
                     </li>
                     <li>
-                        <a class="subText" href="https://caffebene-port.netlify.app/" title="CAFFEEBENE" target="_blank">
+                        <a class="subText hoverable" href="https://caffebene-port.netlify.app/" title="CAFFEEBENE" target="_blank">
                             <h3>CAFFEEBENE</h3>
                         </a>
-                        <a class="link-review" href="https://github.com/jeunseon/caffebene" target="_blank">code review</a>
+                        <a class="link-review hoverable" href="https://github.com/jeunseon/caffebene" target="_blank">code review</a>
                         <div class="hashBox">
                             <span># PC</span>
                             <span># swiper</span>
                             <span># 클론코딩</span>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="subText hoverable" href="" title="PORTFOLIO" target="_blank">
+                            <h3>PORTFOLIO</h3>
+                        </a>
+                        <a class="link-review hoverable" href="https://github.com/jeunseon/eseon-s_port" target="_blank">code review</a>
+                        <div class="hashBox">
+                            <span># PC</span>
+                            <span># GSAP</span>
                         </div>
                     </li>
                 </ul>
@@ -208,11 +220,11 @@
                         <h2>let's work <span>together</span></h2>
                     </div>
                     <div class="btnBox">
-                        <a class="btn" href="mailto:euns420@naver.com" title="email">email</a>
-                        <a class="btn" href="tel:010-8221-5539" title="call">call</a>
-                        <a class="btn" href="https://github.com/jeunseon" title="github-jeunseon" target="_blank">github</a>
-                        <a class="btn" href="https://euns420.tistory.com/" title="tistory-EunSLog" target="_blank">tistory</a>
-                        <a class="btn" href="https://open.kakao.com/o/sXLw2Awe" title="kakaotalk" target="_blank">kakaotalk</a>
+                        <a class="btn hoverable" href="mailto:euns420@naver.com" title="email">email</a>
+                        <a class="btn hoverable" href="tel:010-8221-5539" title="call">call</a>
+                        <a class="btn hoverable" href="https://github.com/jeunseon" title="github-jeunseon" target="_blank">github</a>
+                        <a class="btn hoverable" href="https://euns420.tistory.com/" title="tistory-EunSLog" target="_blank">tistory</a>
+                        <a class="btn hoverable" href="https://open.kakao.com/o/sXLw2Awe" title="kakaotalk" target="_blank">kakaotalk</a>
                     </div>
                 </div>
                 <div class="copy">
@@ -228,7 +240,19 @@
                 <span id="n"><img src="./images/logo/L_N.svg" alt="L_N"></span>
             </div>
         </footer>
-        <div class="btn top">top</div>
+        <div class="btn top hoverable">top</div>
+    </div>
+    <div class="cursor">
+        <div class="cursor_ball cursor_ball_b">
+            <svg height="30" width="30">
+            <circle cx="15" cy="15" r="12" stroke-width="0"></circle>
+            </svg>
+        </div>
+        <div class="cursor_ball cursor_ball_s">
+            <svg height="10" width="10">
+            <circle cx="5" cy="5" r="4" stroke-width="0"></circle>
+            </svg>
+        </div>
     </div>
 </body>
 </html>
