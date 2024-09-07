@@ -797,8 +797,36 @@ header .gnb .menuBox.on li:nth-child(4) a {
     top: 0;
     left: 0;
     mix-blend-mode: difference;
-    z-index: 9999;
+    z-index: 10000;
 }
 .cursor_ball circle {
     fill: #f7f8fa;
+}
+
+/* loading_page */
+.loading_page {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #141212;
+    z-index: 9999;
+}
+.loading_page .logo {
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+}
+.loading_page .logo span {
+    display: block;
+    padding: 0 1px;
+}
+.loading_page .logo span img {
+    width: 100%;
 }

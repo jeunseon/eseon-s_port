@@ -148,10 +148,18 @@ window.onload = function(){
             duration: .3,
             scale: 4
         })
+        gsap.to(smallBall, {
+            duration: .3,
+            scale: 4
+        })
     }
 
     function onMouseHoverOut(){
         gsap.to(bigBall, {
+            duration: .3,
+            scale: 1
+        })  
+        gsap.to(smallBall, {
             duration: .3,
             scale: 1
         })  
