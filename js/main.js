@@ -1,4 +1,11 @@
+// loading page animation
+let loading = document.querySelector('.loading_page');
+setTimeout(() => loading.classList.add("scene1"),0),
+setTimeout(() => loading.classList.add("scene2"), 1500);
+setTimeout(() => loading.classList.remove("scene1", "scene2"),2500);
+
 window.onload = function(){
+    // menu
     const menuOpen = document.querySelector('.menuOpen');
     const menuBox = document.querySelector('.menuBox');
     menuOpen.addEventListener('click', () => {
@@ -164,4 +171,5 @@ window.onload = function(){
             scale: 1
         })  
     }
+
 }
