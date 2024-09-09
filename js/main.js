@@ -4,6 +4,11 @@ setTimeout(() => loading.classList.add("scene1"),0),
 setTimeout(() => loading.classList.add("scene2"), 1500);
 setTimeout(() => loading.classList.remove("scene1", "scene2"),2500);
 
+let rotate = document.querySelectorAll(".rotate");
+let opa = document.querySelectorAll(".opacity");
+setTimeout(() => rotate.forEach(rotate => {rotate.classList.add("on")}), 2500),
+setTimeout(() => {opa.forEach(opa => {opa.classList.add("on")})}, 2500)
+
 window.onload = function(){
     // menu
     const menuOpen = document.querySelector('.menuOpen');
@@ -20,7 +25,6 @@ window.onload = function(){
         $('body, html').animate({scrollTop:0}, 400);
         return false;
     });
-
 
     gsap .registerPlugin(ScrollTrigger);
     // visual logoWrap
@@ -171,5 +175,4 @@ window.onload = function(){
             scale: 1
         })  
     }
-
 }
