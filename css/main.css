@@ -15,7 +15,6 @@ img {vertical-align: middle;}
 body, html {
     scroll-behavior: smooth;
     /*  스크롤이 스무스하게 움직이려면 필수!!  */
-    
     cursor: none;
   }
 body {
@@ -50,6 +49,9 @@ section {
 }
 
 /* loading_page */
+body.scroll {
+    overflow: hidden;
+}
 .loading_page {
     width: 100%;
     height: 100vh;

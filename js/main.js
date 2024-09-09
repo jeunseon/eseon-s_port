@@ -1,8 +1,11 @@
 // loading page animation
 let loading = document.querySelector('.loading_page');
+let body = document.querySelector("body");
+setTimeout(() => body.classList.add("scroll"),0),
 setTimeout(() => loading.classList.add("scene1"),0),
 setTimeout(() => loading.classList.add("scene2"), 1500);
-setTimeout(() => loading.classList.remove("scene1", "scene2"),2500);
+setTimeout(() => loading.classList.remove("scene1", "scene2"),2500),
+setTimeout(() => body.classList.remove("scroll"),2500);
 
 let rotate = document.querySelectorAll(".rotate");
 let opa = document.querySelectorAll(".opacity");
